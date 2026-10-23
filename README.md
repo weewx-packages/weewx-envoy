@@ -13,6 +13,9 @@ does not include those catalog repairs.
 
 ## Install
 
+An existing WeeWX station is required. Replace `/path/to/weewx.conf`
+with its configuration file before running the commands.
+
 Use the Python environment and `weectl` belonging to your WeeWX station. The catalog release requires Python >=3.10,<3.15 and WeeWX >=5.5,<6.
 
 ```sh
@@ -20,9 +23,9 @@ weectl extension install https://github.com/weewx-packages/catalog/releases/down
 weectl station reconfigure --driver=user.envoy --config=/path/to/weewx.conf
 ```
 
-Replace `/path/to/weewx.conf` with your station configuration. A downloaded copy
-of this same archive can be passed instead of the URL. These commands work with
-stock WeeWX 5; no package-manager integration is required.
+A downloaded copy of this same archive can be passed instead of the URL.
+These commands work with stock WeeWX 5; no package-manager integration is
+required.
 
 ## Configure local polling
 
